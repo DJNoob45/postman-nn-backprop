@@ -42,3 +42,14 @@ class SimpleNN:
         self.b1 -= lr * self.grads["db1"]
         self.W2 -= lr * self.grads["dW2"]
         self.b2 -= lr * self.grads["db2"]
+net = SimpleNN(input_size=4, hidden_size=5, output_size=1)
+X = np.random.randn(10, 4)
+y = np.random.randint(0, 2, size=(10, 1)).astype(float)
+
+y_pred = net.forward(X)
+loss = net.compute_loss(y_pred, y)
+print("Loss:", loss)
+
+grads = net.backward(X, y)
+net.update(lr=0.1)
+print("Backward pass and update ran with no errors.")
