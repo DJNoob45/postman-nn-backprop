@@ -64,9 +64,13 @@ To confirm the manual derivation above was actually correct, I built the same ne
 
 
 dW1: max diff = 3.15e-11  [PASS]
+
 db1: max diff = 7.17e-12  [PASS]
+
 dW2: max diff = 1.04e-10  [PASS]
+
 db2: max diff = 1.32e-09  [PASS]
+
 
 
 These differences are on the order of $10^{-9}$ to $10^{-11}$, which is the kind of noise you'd expect from floating-point arithmetic doing the same computation two different ways 
